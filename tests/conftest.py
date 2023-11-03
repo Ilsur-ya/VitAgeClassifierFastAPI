@@ -1,6 +1,6 @@
 import time
 import pytest
-from src.testproject.sdk.drivers import webdriver
+from selenium import webdriver
 
 def get_driver(wait_time=0):
     "creates a webdriver and loads the homepage"
