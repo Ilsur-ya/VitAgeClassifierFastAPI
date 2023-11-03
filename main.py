@@ -10,9 +10,12 @@ from transformers import ViTFeatureExtractor, ViTForImageClassification
 
 import uvicorn
 from fastapi import FastAPI
+from fastapi.testclient import TestClient
+
+
 
 app = FastAPI()
-
+client = TestClient(app)
 
 @app.get("/get-age-by-photo")
 async def get_image(url):
