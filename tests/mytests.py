@@ -1,5 +1,6 @@
-from main import client
+from main import app
 
+client = app
 def test_old_man(client):
     response = client.get(
         "/get-age-by-photo",
