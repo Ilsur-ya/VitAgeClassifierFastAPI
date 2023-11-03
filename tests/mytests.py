@@ -1,6 +1,9 @@
 from main import app
 
-client = app
+from fastapi.testclient import TestClient
+
+
+client = TestClient(app)
 def test_old_man(client):
     response = client.get(
         "/get-age-by-photo",
