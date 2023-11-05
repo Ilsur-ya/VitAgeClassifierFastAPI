@@ -21,7 +21,8 @@ def test_young_man(client):
     assert response.status_code == 200
     assert response.json() == {
         'Age': '0-2'}
-def test_empty_query(client):
+
+def test_pustoi_query(client):
     response = client.get(
         "/get-age-by-photo",
         params={
