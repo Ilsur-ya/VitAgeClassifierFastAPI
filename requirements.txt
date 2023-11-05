@@ -1,5 +1,7 @@
+pytest~=7.4.3
 fastapi~=0.104.1
 requests~=2.31.0
+validators~=0.22.0
 torch~=2.1.0
 matplotlib~=3.8.1
 uvicorn~=0.23.2

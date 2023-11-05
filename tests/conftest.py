@@ -8,5 +8,3 @@ from fastapi.testclient import TestClient
 def client():
     client = TestClient(app)
     yield client
-
-

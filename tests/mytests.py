@@ -10,6 +10,7 @@ def test_old_man(client):
     assert response.json() == {
         'Age': 'more than 70'}
 
+
 def test_young_man(client):
     response = client.get(
         "/get-age-by-photo",
@@ -24,10 +25,12 @@ def test_empty_query(client):
     response = client.get(
         "/get-age-by-photo",
         params={
-            'url': '',
+            'url': 'абв',
         }
     )
-    assert response.status_code == 404
+    assert response.status_code == 200
+    assert response.json() == {
+        'Age': 'This is not url'}
 
 # python -m pytest app/tests/test.py
 
